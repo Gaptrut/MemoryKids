@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -97,10 +98,13 @@ class CardAdapter(private var cardList: List<Card>, private val context: Context
 
 
                     if (matchedPairsCount == totalPairs) {
+                        val mediaPlayer =
+                            MediaPlayer.create(holder.cardImage.context, R.raw.yipee)
+                        mediaPlayer.start()
                         // Visa en toast-notis
                         Toast.makeText(
                             holder.cardImage.context,
-                            "Game over! Starting new game...",
+                            "Seger! 🎉En gång till??\uD83D\uDE0A",
                             Toast.LENGTH_SHORT
                         ).show()
 
