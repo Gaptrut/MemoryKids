@@ -16,6 +16,7 @@ class NewGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_game)
 
+
         mediaPlayer = MediaPlayer.create(this, R.raw.baaaa)
         val maxVolume = 100  //Procentandel. 100 = 100%, 50 = 50%, osv.
         mediaPlayer?.setVolume(maxVolume.toFloat(), maxVolume.toFloat())
@@ -24,6 +25,7 @@ class NewGameActivity : AppCompatActivity() {
 
         val easyButton = findViewById<Button>(R.id.buttonEasy)
         easyButton.setOnClickListener {
+            mediaPlayer?.stop()
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("difficulty", "Lätt")
             startActivity(intent)
