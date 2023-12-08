@@ -50,7 +50,7 @@ class NewGameActivity : AppCompatActivity() {
         val exitButton: ImageButton = findViewById(R.id.exitButton)
         exitButton.setOnClickListener {
             mediaPlayer?.stop()
-            Toast.makeText(this, "Hejdå! 👋😊",
+            Toast.makeText(this, "Vi ses!! 👋😊",
                 Toast.LENGTH_SHORT).show()
             val homeIntent = Intent(Intent.ACTION_MAIN)
             homeIntent.addCategory(Intent.CATEGORY_HOME)
